@@ -64,8 +64,6 @@ namespace APICore.Controllers
         }
 
 
-
-        // Método para el inicio de sesión
         // Método para el inicio de sesión
         [HttpPost("Login")]
         public async Task<IActionResult> Login(LoginModel login)
@@ -164,6 +162,12 @@ namespace APICore.Controllers
                 return NotFound("Usuario no encontrado.");
             }
 
+            var currentRoles = await _userManager.GetRolesAsync(user);
+            if (currentRoles.Count > 0)
+            {
+                return BadRequest("El usuario ya tiene un rol asignado. No se pueden asignar múltiples roles.");
+            }
+
             var roleExists = await _roleManager.RoleExistsAsync(model.RoleName);
             if (!roleExists)
             {
@@ -171,7 +175,6 @@ namespace APICore.Controllers
             }
 
             var result = await _userManager.AddToRoleAsync(user, model.RoleName);
-
             if (result.Succeeded)
             {
                 return Ok("Rol asignado exitosamente.");

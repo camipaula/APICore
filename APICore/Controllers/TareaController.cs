@@ -68,27 +68,51 @@ namespace APICore.Controllers
 
         //GET DE TAREAS PENDIENTES POR EMPLEADO ESPECIFICO
         [HttpGet("pendientes/{usuarioId}")]
-        public async Task<ActionResult<IEnumerable<CreateTareaDTO>>> GetTareasPendientes(string usuarioId)
+        public async Task<ActionResult> GetTareasPendientes(string usuarioId)
         {
             var tareasPendientes = await _context.Tareas
+                .Include(t => t.Categoria) // Incluye la relación con Categoría
                 .Where(t => t.UsuarioId == usuarioId && (t.StatusId == 1 || t.StatusId == 2))
-                .Select(t => new CreateTareaDTO
+                .Select(t => new
                 {
-                    Id = t.Id,
-                    ProyectoId = t.ProyectoId,
-                    UsuarioId = t.UsuarioId,
-                    CategoriaId = t.CategoriaId,
-                    StatusId = t.StatusId,
-                    Nombre = t.Nombre,
-                    Descripcion = t.Descripcion,
-                    FechaEstimada = t.FechaEstimada,
-                    FechaReal = t.FechaReal
+                    t.Id,
+                    t.ProyectoId,
+                    t.UsuarioId,
+                    t.CategoriaId,
+                    CategoriaNombre = t.Categoria.Nombre, // Proyecta el nombre de la categoría
+                    t.StatusId,
+                    t.Nombre,
+                    t.Descripcion,
+                    t.FechaEstimada
                 })
                 .ToListAsync();
 
             return Ok(tareasPendientes);
         }
+        //get completadas
+        [HttpGet("completadas/{usuarioId}")]
+        public async Task<ActionResult> GetTareasCompletadas(string usuarioId)
+        {
+            var tareasCompletadas = await _context.Tareas
+                .Include(t => t.Categoria) // Incluye la relación con Categoría
+                .Where(t => t.UsuarioId == usuarioId && t.StatusId == 4) // Solo completadas
+                .Select(t => new
+                {
+                    t.Id,
+                    t.ProyectoId,
+                    t.UsuarioId,
+                    t.CategoriaId,
+                    CategoriaNombre = t.Categoria.Nombre, // Proyecta el nombre de la categoría
+                    t.StatusId,
+                    t.Nombre,
+                    t.Descripcion,
+                    t.FechaEstimada,
+                    t.FechaReal
+                })
+                .ToListAsync();
 
+            return Ok(tareasCompletadas);
+        }
 
 
 
@@ -107,6 +131,12 @@ namespace APICore.Controllers
 
                 var categoria = await _context.Categorias.FindAsync(tareaDto.CategoriaId);
                 if (categoria == null) return BadRequest("La categoría especificada no existe.");
+
+                // Validar que la fecha estimada esté dentro del rango de fechas del proyecto
+                if (tareaDto.FechaEstimada < proyecto.FechaInicio || tareaDto.FechaEstimada > proyecto.FechaFin)
+                {
+                    return BadRequest("La fecha estimada de la tarea debe estar dentro del rango de fechas del proyecto.");
+                }
 
                 // Crear la tarea
                 var tarea = new Tarea
@@ -139,6 +169,7 @@ namespace APICore.Controllers
 
 
 
+
         // Método para que el empleado actualice solo el estado de la tarea
         [HttpPut("updateStatus/{id}")]
         public async Task<IActionResult> UpdateStatus(int id, UpdateStatusDTO updateStatusDto)
@@ -152,6 +183,12 @@ namespace APICore.Controllers
             // Actualizar solo el estado de la tarea
             tarea.StatusId = updateStatusDto.StatusId;
 
+            // Si el estado es "Completada" el ID de "Completada" es 4, establecer la fecha real si no está ya definida
+            if (updateStatusDto.StatusId == 4 && !tarea.FechaReal.HasValue)
+            {
+                tarea.FechaReal = DateTime.Now;
+            }
+
             _context.Entry(tarea).State = EntityState.Modified;
             try
             {
@@ -164,6 +201,7 @@ namespace APICore.Controllers
 
             return NoContent();
         }
+
 
 
         /*[HttpPut("{id}")]
@@ -207,6 +245,18 @@ namespace APICore.Controllers
                     return NotFound("La tarea no existe.");
                 }
 
+                var proyecto = await _context.Proyectos.FindAsync(updateTaskDto.ProyectoId);
+                if (proyecto == null)
+                {
+                    return BadRequest("El proyecto especificado no existe.");
+                }
+
+                // Validar que la fecha estimada esté dentro del rango de fechas del proyecto
+                if (updateTaskDto.FechaEstimada < proyecto.FechaInicio || updateTaskDto.FechaEstimada > proyecto.FechaFin)
+                {
+                    return BadRequest("La fecha estimada de la tarea debe estar dentro del rango de fechas del proyecto.");
+                }
+
                 // Actualizar todos los campos permitidos
                 tarea.ProyectoId = updateTaskDto.ProyectoId;
                 tarea.UsuarioId = updateTaskDto.UsuarioId;
@@ -230,7 +280,6 @@ namespace APICore.Controllers
         }
 
 
-
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTarea(int id)
         {
@@ -250,6 +299,110 @@ namespace APICore.Controllers
         {
             return _context.Tareas.Any(e => e.Id == id);
         }
+
+        //METODOS PARA EL CORE
+        //EMPLEADO PRODUCTIVIDAD
+        // GET: api/Tarea/ProductividadEmpleado/{usuarioId}
+        [HttpGet("ProductividadEmpleado/{usuarioId}")]
+        public async Task<ActionResult> GetProductividadEmpleado(string usuarioId, int? categoriaId = null, int? proyectoId = null)
+        {
+            try
+            {
+                // Filtrar todas las tareas del empleado para determinar el total de tareas
+                var todasTareasEmpleado = _context.Tareas
+                    .Where(t => t.UsuarioId == usuarioId);
+
+                // Filtrar las tareas según los parámetros (categoría o proyecto)
+                var tareasFiltradas = todasTareasEmpleado
+                    .Include(t => t.Categoria)
+                    .Include(t => t.Proyecto)
+                    .AsQueryable();
+
+                if (categoriaId.HasValue)
+                {
+                    tareasFiltradas = tareasFiltradas.Where(t => t.CategoriaId == categoriaId.Value);
+                }
+
+                if (proyectoId.HasValue)
+                {
+                    tareasFiltradas = tareasFiltradas.Where(t => t.ProyectoId == proyectoId.Value);
+                }
+
+                // Obtener el total de tareas sin filtros
+                var totalTareas = await todasTareasEmpleado.CountAsync();
+
+                // Obtener el total de tareas filtradas
+                var totalTareasFiltradas = await tareasFiltradas.CountAsync();
+
+                // Filtrar las tareas completadas
+                var tareasCompletadas = await tareasFiltradas
+                    .Where(t => t.FechaReal.HasValue && t.StatusId == 4) // Solo tareas completadas
+                    .ToListAsync();
+
+                // Calcular las tareas completadas a tiempo
+                var tareasATiempo = tareasCompletadas
+                    .Count(t => t.FechaReal <= t.FechaEstimada);
+
+                // Si no hay tareas filtradas, devolvemos valores vacíos
+                if (totalTareasFiltradas == 0)
+                {
+                    return Ok(new
+                    {
+                        TotalTareas = totalTareas, // Todas las tareas del empleado
+                        TotalTareasFiltradas = 0,
+                        TareasCompletadasATiempo = 0,
+                        Productividad = "Sin datos",
+                        TiempoPromedioDeCompletitud = "N/A",
+                        DistribucionCategorias = new List<object>()
+                    });
+                }
+
+                // Calcular la productividad como un porcentaje
+                var productividad = (double)tareasATiempo / totalTareasFiltradas * 100;
+
+                // Calcular el tiempo promedio de completitud (en días) para tareas completadas
+                double? tiempoPromedioDeCompletitud = null;
+                if (tareasCompletadas.Any())
+                {
+                    tiempoPromedioDeCompletitud = tareasCompletadas
+                        .Average(t => (t.FechaReal.Value - t.FechaEstimada).TotalDays);
+                }
+
+                // Distribución de tareas por categoría
+                var distribucionCategorias = await tareasFiltradas
+                    .GroupBy(t => t.Categoria.Nombre)
+                    .Select(g => new
+                    {
+                        Categoria = g.Key,
+                        Cantidad = g.Count(),
+                        Porcentaje = (double)g.Count() / totalTareasFiltradas * 100
+                    })
+                    .ToListAsync();
+
+                // Devolvemos los datos correctamente estructurados
+                return Ok(new
+                {
+                    TotalTareas = totalTareas, // Todas las tareas del empleado
+                    TotalTareasFiltradas = totalTareasFiltradas, // Tareas según los filtros aplicados
+                    TareasCompletadasATiempo = tareasATiempo,
+                    Productividad = productividad,
+                    TiempoPromedioDeCompletitud = tiempoPromedioDeCompletitud.HasValue
+                        ? tiempoPromedioDeCompletitud.Value.ToString("F2")
+                        : "N/A",
+                    DistribucionCategorias = distribucionCategorias
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en GetProductividadEmpleado: {ex.Message}");
+                return StatusCode(500, "Error interno del servidor.");
+            }
+        }
+
+
     }
+
+
+
 
 }

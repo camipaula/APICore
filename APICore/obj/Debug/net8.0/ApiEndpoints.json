@@ -219,6 +219,43 @@
   },
   {
     "ContainingType": "APICore.Controllers.ProyectoController",
+    "Method": "GetAvanceProyecto",
+    "RelativePath": "api/Proyecto/Avance/{proyectoId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proyectoId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APICore.Controllers.ProyectoController",
+    "Method": "CompararProyectos",
+    "RelativePath": "api/Proyecto/CompararProyectos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "proyecto1Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "proyecto2Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APICore.Controllers.ProyectoController",
     "Method": "GetProyectosConTareas",
     "RelativePath": "api/Proyecto/WithTasks",
     "HttpMethod": "GET",
@@ -452,6 +489,22 @@
   },
   {
     "ContainingType": "APICore.Controllers.TareaController",
+    "Method": "GetTareasCompletadas",
+    "RelativePath": "api/Tarea/completadas/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APICore.Controllers.TareaController",
     "Method": "GetTareasPendientes",
     "RelativePath": "api/Tarea/pendientes/{usuarioId}",
     "HttpMethod": "GET",
@@ -464,17 +517,33 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "APICore.Controllers.TareaController",
+    "Method": "GetProductividadEmpleado",
+    "RelativePath": "api/Tarea/ProductividadEmpleado/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APICore.DTOs.CreateTareaDTO, APICore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "usuarioId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "categoriaId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "proyectoId",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
       }
-    ]
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "APICore.Controllers.TareaController",

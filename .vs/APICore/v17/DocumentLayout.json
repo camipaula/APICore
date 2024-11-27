@@ -11,16 +11,60 @@
       "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\tareacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\tareacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\createtareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\createtareadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\rolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\usuario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\usuario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\proyectocontareasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\proyectocontareasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\createcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\createcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\createproyectodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,56 +75,12 @@
       "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\createstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\createcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\createcategoriadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\tarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\models\\usuario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\models\\usuario .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\statuscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\data\\applicationdbcontext .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\proyectocontareasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\proyectocontareasdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\dtos\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\dtos\\updatestatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|solutionrelative:apicore\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BA58FA7-1B36-44A0-86F3-2FAD4C5F291A}|APICore\\APICore.csproj|c:\\users\\camil\\source\\repos\\apicore\\apicore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -122,7 +122,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,51 +130,65 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateProyectoDTO.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateProyectoDTO.cs",
-              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateProyectoDTO.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateProyectoDTO.cs",
-              "RelativeToolTip": "APICore\\DTOs\\CreateProyectoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T17:59:31.375Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateStatusDTO.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateStatusDTO.cs",
-              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateStatusDTO.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateStatusDTO.cs",
-              "RelativeToolTip": "APICore\\DTOs\\CreateStatusDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T17:38:54.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateTareaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateTareaDTO.cs",
-              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateTareaDTO.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateTareaDTO.cs",
-              "RelativeToolTip": "APICore\\DTOs\\CreateTareaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T17:45:38.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TareaController.cs",
               "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\TareaController.cs",
               "RelativeDocumentMoniker": "APICore\\Controllers\\TareaController.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\TareaController.cs",
               "RelativeToolTip": "APICore\\Controllers\\TareaController.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAAA/wOgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHIBAAAAAAAAAAAgwJUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:44:05.62Z"
+              "WhenOpened": "2024-11-03T16:44:05.62Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StatusController.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\StatusController.cs",
+              "RelativeDocumentMoniker": "APICore\\Controllers\\StatusController.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\StatusController.cs",
+              "RelativeToolTip": "APICore\\Controllers\\StatusController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAqwEcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T16:45:52.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateTareaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateTareaDTO.cs",
+              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateTareaDTO.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateTareaDTO.cs",
+              "RelativeToolTip": "APICore\\DTOs\\CreateTareaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T17:45:38.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext .cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Data\\ApplicationDbContext .cs",
+              "RelativeDocumentMoniker": "APICore\\Data\\ApplicationDbContext .cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Data\\ApplicationDbContext .cs",
+              "RelativeToolTip": "APICore\\Data\\ApplicationDbContext .cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T17:38:03.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateStatusDTO.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\UpdateStatusDTO.cs",
+              "RelativeDocumentMoniker": "APICore\\DTOs\\UpdateStatusDTO.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\UpdateStatusDTO.cs",
+              "RelativeToolTip": "APICore\\DTOs\\UpdateStatusDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T18:28:21.978Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -184,22 +198,10 @@
               "RelativeDocumentMoniker": "APICore\\Controllers\\ProyectoController.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\ProyectoController.cs",
               "RelativeToolTip": "APICore\\Controllers\\ProyectoController.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwE4AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAJQBAAAAAAAAAAAAAKYBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T17:55:54.924Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RolController.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\RolController.cs",
-              "RelativeDocumentMoniker": "APICore\\Controllers\\RolController.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\RolController.cs",
-              "RelativeToolTip": "APICore\\Controllers\\RolController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:40:58.019Z"
             },
             {
               "$type": "Document",
@@ -209,73 +211,38 @@
               "RelativeDocumentMoniker": "APICore\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "APICore\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAIUAAAAAAAAAAAAkwJwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAowLgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:38:55.866Z"
+              "WhenOpened": "2024-11-03T16:38:55.866Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CreateCategoriaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateCategoriaDTO.cs",
-              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateCategoriaDTO.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateCategoriaDTO.cs",
-              "RelativeToolTip": "APICore\\DTOs\\CreateCategoriaDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T18:14:12.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Categoria.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Categoria.cs",
-              "RelativeDocumentMoniker": "APICore\\Models\\Categoria.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Categoria.cs",
-              "RelativeToolTip": "APICore\\Models\\Categoria.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T17:37:43.663Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Status.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Status.cs",
-              "RelativeDocumentMoniker": "APICore\\Models\\Status.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Status.cs",
-              "RelativeToolTip": "APICore\\Models\\Status.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T17:37:29.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "Tarea.cs",
               "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Tarea.cs",
               "RelativeDocumentMoniker": "APICore\\Models\\Tarea.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Tarea.cs",
               "RelativeToolTip": "APICore\\Models\\Tarea.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T17:37:07.263Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Proyecto.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Proyecto.cs",
-              "RelativeDocumentMoniker": "APICore\\Models\\Proyecto.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Proyecto.cs",
-              "RelativeToolTip": "APICore\\Models\\Proyecto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "RolController.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\RolController.cs",
+              "RelativeDocumentMoniker": "APICore\\Controllers\\RolController.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\RolController.cs",
+              "RelativeToolTip": "APICore\\Controllers\\RolController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwBoAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T17:36:43.101Z"
+              "WhenOpened": "2024-11-03T16:40:58.019Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
               "Title": "Usuario .cs",
               "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Usuario .cs",
               "RelativeDocumentMoniker": "APICore\\Models\\Usuario .cs",
@@ -287,67 +254,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "StatusController.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\StatusController.cs",
-              "RelativeDocumentMoniker": "APICore\\Controllers\\StatusController.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\StatusController.cs",
-              "RelativeToolTip": "APICore\\Controllers\\StatusController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAswFsAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "Proyecto.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Proyecto.cs",
+              "RelativeDocumentMoniker": "APICore\\Models\\Proyecto.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Proyecto.cs",
+              "RelativeToolTip": "APICore\\Models\\Proyecto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T16:45:52.434Z"
+              "WhenOpened": "2024-10-31T17:36:43.101Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 11,
+              "Title": "Status.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Status.cs",
+              "RelativeDocumentMoniker": "APICore\\Models\\Status.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Status.cs",
+              "RelativeToolTip": "APICore\\Models\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T17:37:29.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Categoria.cs",
+              "RelativeDocumentMoniker": "APICore\\Models\\Categoria.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Models\\Categoria.cs",
+              "RelativeToolTip": "APICore\\Models\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T17:37:43.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "CategoriaController.cs",
               "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\CategoriaController.cs",
               "RelativeDocumentMoniker": "APICore\\Controllers\\CategoriaController.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\CategoriaController.cs",
               "RelativeToolTip": "APICore\\Controllers\\CategoriaController.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAswFsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAswCIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T16:47:56.97Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\WeatherForecastController.cs",
-              "RelativeDocumentMoniker": "APICore\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\WeatherForecastController.cs",
-              "RelativeToolTip": "APICore\\Controllers\\WeatherForecastController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T22:27:39.334Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ApplicationDbContext .cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Data\\ApplicationDbContext .cs",
-              "RelativeDocumentMoniker": "APICore\\Data\\ApplicationDbContext .cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Data\\ApplicationDbContext .cs",
-              "RelativeToolTip": "APICore\\Data\\ApplicationDbContext .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T17:38:03.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\LoginModel.cs",
-              "RelativeDocumentMoniker": "APICore\\DTOs\\LoginModel.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\LoginModel.cs",
-              "RelativeToolTip": "APICore\\DTOs\\LoginModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T21:33:14.097Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 14,
               "Title": "ProyectoConTareasDTO.cs",
               "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\ProyectoConTareasDTO.cs",
               "RelativeDocumentMoniker": "APICore\\DTOs\\ProyectoConTareasDTO.cs",
@@ -359,15 +314,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UpdateStatusDTO.cs",
-              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\UpdateStatusDTO.cs",
-              "RelativeDocumentMoniker": "APICore\\DTOs\\UpdateStatusDTO.cs",
-              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\UpdateStatusDTO.cs",
-              "RelativeToolTip": "APICore\\DTOs\\UpdateStatusDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "CreateCategoriaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateCategoriaDTO.cs",
+              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateCategoriaDTO.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateCategoriaDTO.cs",
+              "RelativeToolTip": "APICore\\DTOs\\CreateCategoriaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T18:28:21.978Z"
+              "WhenOpened": "2024-11-03T18:14:12.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateProyectoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateProyectoDTO.cs",
+              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateProyectoDTO.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateProyectoDTO.cs",
+              "RelativeToolTip": "APICore\\DTOs\\CreateProyectoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T17:59:31.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CreateStatusDTO.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateStatusDTO.cs",
+              "RelativeDocumentMoniker": "APICore\\DTOs\\CreateStatusDTO.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\CreateStatusDTO.cs",
+              "RelativeToolTip": "APICore\\DTOs\\CreateStatusDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T17:38:54.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\LoginModel.cs",
+              "RelativeDocumentMoniker": "APICore\\DTOs\\LoginModel.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\DTOs\\LoginModel.cs",
+              "RelativeToolTip": "APICore\\DTOs\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T21:33:14.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "APICore\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "APICore\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T22:27:39.334Z"
             },
             {
               "$type": "Document",
@@ -449,7 +452,6 @@
               "RelativeDocumentMoniker": "APICore\\Migrations\\20241103163111_InitialCreate.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Migrations\\20241103163111_InitialCreate.cs",
               "RelativeToolTip": "APICore\\Migrations\\20241103163111_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T16:31:11.934Z"
             },
@@ -461,7 +463,6 @@
               "RelativeDocumentMoniker": "APICore\\Migrations\\20241103162752_Create.cs",
               "ToolTip": "C:\\Users\\camil\\source\\repos\\APICore\\APICore\\Migrations\\20241103162752_Create.cs",
               "RelativeToolTip": "APICore\\Migrations\\20241103162752_Create.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T16:27:52.89Z"
             }
