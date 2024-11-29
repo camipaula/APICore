@@ -152,6 +152,15 @@ namespace APICore.Controllers
             return BadRequest(result.Errors);
         }
 
+        //solo para ver si sirve xd 
+        [HttpGet("TestCors")]
+        public IActionResult TestCors()
+        {
+            return Ok("CORS Configurado Correctamente");
+        }
+
+
+
         // POST: api/Usuario/AssignRole
         [HttpPost("AssignRole")]
         public async Task<IActionResult> AssignRole([FromBody] AssignRoleModel model)

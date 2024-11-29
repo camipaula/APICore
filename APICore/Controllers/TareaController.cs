@@ -31,6 +31,7 @@ namespace APICore.Controllers
                     StatusId = t.StatusId,
                     Nombre = t.Nombre,
                     Descripcion = t.Descripcion,
+                    FechaInicio = t.FechaInicio,
                     FechaEstimada = t.FechaEstimada,
                     FechaReal = t.FechaReal
                 })
@@ -53,6 +54,7 @@ namespace APICore.Controllers
                     StatusId = t.StatusId,
                     Nombre = t.Nombre,
                     Descripcion = t.Descripcion,
+                    FechaInicio = t.FechaInicio, 
                     FechaEstimada = t.FechaEstimada,
                     FechaReal = t.FechaReal
                 })
@@ -66,29 +68,32 @@ namespace APICore.Controllers
             return Ok(tarea);
         }
 
+
         //GET DE TAREAS PENDIENTES POR EMPLEADO ESPECIFICO
         [HttpGet("pendientes/{usuarioId}")]
         public async Task<ActionResult> GetTareasPendientes(string usuarioId)
         {
             var tareasPendientes = await _context.Tareas
                 .Include(t => t.Categoria) // Incluye la relación con Categoría
-                .Where(t => t.UsuarioId == usuarioId && (t.StatusId == 1 || t.StatusId == 2))
+                .Where(t => t.UsuarioId == usuarioId && (t.StatusId == 1 || t.StatusId == 2)) // Pendientes
                 .Select(t => new
                 {
                     t.Id,
                     t.ProyectoId,
                     t.UsuarioId,
                     t.CategoriaId,
-                    CategoriaNombre = t.Categoria.Nombre, // Proyecta el nombre de la categoría
+                    CategoriaNombre = t.Categoria.Nombre, // nombre de la categoría
                     t.StatusId,
                     t.Nombre,
                     t.Descripcion,
+                    FechaInicio = t.FechaInicio, 
                     t.FechaEstimada
                 })
                 .ToListAsync();
 
             return Ok(tareasPendientes);
         }
+
         //get completadas
         [HttpGet("completadas/{usuarioId}")]
         public async Task<ActionResult> GetTareasCompletadas(string usuarioId)
@@ -102,10 +107,11 @@ namespace APICore.Controllers
                     t.ProyectoId,
                     t.UsuarioId,
                     t.CategoriaId,
-                    CategoriaNombre = t.Categoria.Nombre, // Proyecta el nombre de la categoría
+                    CategoriaNombre = t.Categoria.Nombre, 
                     t.StatusId,
                     t.Nombre,
                     t.Descripcion,
+                    FechaInicio = t.FechaInicio, 
                     t.FechaEstimada,
                     t.FechaReal
                 })
@@ -113,7 +119,75 @@ namespace APICore.Controllers
 
             return Ok(tareasCompletadas);
         }
+        /*//metodo para obtener todas las tareas que faltan 
+        [HttpGet("pendientesPorRangoFechas")]
+        public async Task<ActionResult> GetTareasPendientesPorRangoFechas([FromQuery] DateTime fechaInicio, [FromQuery] DateTime fechaFin)
+        {
+            var tareasPendientes = await _context.Tareas
+                .Include(t => t.Proyecto) // Incluye información del proyecto
+                .Include(t => t.Categoria) // Incluye información de la categoría
+                .Where(t => t.FechaInicio >= fechaInicio && t.FechaInicio <= fechaFin && t.StatusId != 4) // Filtra por rango y no completadas
+                .Select(t => new
+                {
+                    t.Id,
+                    t.ProyectoId,
+                    t.UsuarioId,
+                    t.CategoriaId,
+                    ProyectoNombre = t.Proyecto.Nombre, 
+                    CategoriaNombre = t.Categoria.Nombre, 
+                    t.StatusId,
+                    t.Nombre,
+                    t.Descripcion,
+                    FechaInicio = t.FechaInicio, 
+                    t.FechaEstimada
+                })
+                .ToListAsync();
 
+            return Ok(tareasPendientes);
+        }*/
+
+        //Pendientesss 
+        [HttpGet("pendientesPorRangoFechas")]
+        public async Task<ActionResult> GetTareasPendientesPorRangoFechas([FromQuery] DateTime fechaInicio, [FromQuery] DateTime fechaFin)
+        {
+            // Obtener todas las tareas
+            var todasLasTareas = await _context.Tareas
+                .Include(t => t.Proyecto)
+                .Include(t => t.Categoria)
+                .Include(t => t.Usuario)
+                .Include(t => t.Status)
+                .ToListAsync();
+
+
+            var tareasPendientes = new List<object>();
+
+            foreach (var tarea in todasLasTareas)
+            {
+                if (tarea.FechaReal == null && tarea.FechaInicio >= fechaInicio && tarea.FechaInicio <= fechaFin)
+                {
+                    // Agregar la tarea a la lista filtrada
+                    tareasPendientes.Add(new
+                    {
+                        tarea.Id,
+                        tarea.ProyectoId,
+                        tarea.UsuarioId,
+                        UsuarioNombre = tarea.Usuario.Nombre,
+                        tarea.CategoriaId,
+                        ProyectoNombre = tarea.Proyecto.Nombre,
+                        CategoriaNombre = tarea.Categoria.Nombre,
+                        tarea.StatusId,
+                        StatusNombre = tarea.Status.Nombre,
+                        tarea.Nombre,
+                        tarea.Descripcion,
+                        FechaInicio = tarea.FechaInicio,
+                        tarea.FechaEstimada 
+                    });
+                }
+            }
+
+            // Retornar las tareas filtradas
+            return Ok(tareasPendientes);
+        }
 
 
 
@@ -132,10 +206,15 @@ namespace APICore.Controllers
                 var categoria = await _context.Categorias.FindAsync(tareaDto.CategoriaId);
                 if (categoria == null) return BadRequest("La categoría especificada no existe.");
 
-                // Validar que la fecha estimada esté dentro del rango de fechas del proyecto
-                if (tareaDto.FechaEstimada < proyecto.FechaInicio || tareaDto.FechaEstimada > proyecto.FechaFin)
+                // Validar que la fecha estimada y la fecha de inicio estén dentro del rango de fechas del proyecto
+                if (tareaDto.FechaInicio < proyecto.FechaInicio || tareaDto.FechaInicio > proyecto.FechaFin)
                 {
-                    return BadRequest("La fecha estimada de la tarea debe estar dentro del rango de fechas del proyecto.");
+                    return BadRequest("La fecha de inicio de la tarea debe estar dentro del rango de fechas del proyecto.");
+                }
+
+                if (tareaDto.FechaEstimada < tareaDto.FechaInicio || tareaDto.FechaEstimada > proyecto.FechaFin)
+                {
+                    return BadRequest("La fecha estimada de la tarea debe ser posterior a la fecha de inicio y dentro del rango del proyecto.");
                 }
 
                 // Crear la tarea
@@ -144,9 +223,10 @@ namespace APICore.Controllers
                     ProyectoId = tareaDto.ProyectoId,
                     UsuarioId = tareaDto.UsuarioId,
                     CategoriaId = tareaDto.CategoriaId,
-                    StatusId = tareaDto.StatusId > 0 ? tareaDto.StatusId : 1, // Establecer StatusId en 1 si no se especifica
+                    StatusId = tareaDto.StatusId > 0 ? tareaDto.StatusId : 1, // Empieza con status 1 porque es creada
                     Nombre = tareaDto.Nombre,
                     Descripcion = tareaDto.Descripcion,
+                    FechaInicio = tareaDto.FechaInicio, // Nueva propiedad
                     FechaEstimada = tareaDto.FechaEstimada,
                     FechaReal = tareaDto.FechaReal
                 };
@@ -169,7 +249,6 @@ namespace APICore.Controllers
 
 
 
-
         // Método para que el empleado actualice solo el estado de la tarea
         [HttpPut("updateStatus/{id}")]
         public async Task<IActionResult> UpdateStatus(int id, UpdateStatusDTO updateStatusDto)
@@ -183,7 +262,7 @@ namespace APICore.Controllers
             // Actualizar solo el estado de la tarea
             tarea.StatusId = updateStatusDto.StatusId;
 
-            // Si el estado es "Completada" el ID de "Completada" es 4, establecer la fecha real si no está ya definida
+            // Si el estado es "Completada" (ID de "Completada" es 4), establecer la fecha real si no está ya definida
             if (updateStatusDto.StatusId == 4 && !tarea.FechaReal.HasValue)
             {
                 tarea.FechaReal = DateTime.Now;
@@ -201,6 +280,8 @@ namespace APICore.Controllers
 
             return NoContent();
         }
+
+
 
 
 
@@ -251,10 +332,16 @@ namespace APICore.Controllers
                     return BadRequest("El proyecto especificado no existe.");
                 }
 
-                // Validar que la fecha estimada esté dentro del rango de fechas del proyecto
-                if (updateTaskDto.FechaEstimada < proyecto.FechaInicio || updateTaskDto.FechaEstimada > proyecto.FechaFin)
+                // Validar que la fecha de inicio esté dentro del rango de fechas del proyecto
+                if (updateTaskDto.FechaInicio < proyecto.FechaInicio || updateTaskDto.FechaInicio > proyecto.FechaFin)
                 {
-                    return BadRequest("La fecha estimada de la tarea debe estar dentro del rango de fechas del proyecto.");
+                    return BadRequest("La fecha de inicio de la tarea debe estar dentro del rango de fechas del proyecto.");
+                }
+
+                // Validar que la fecha estimada esté dentro del rango permitido
+                if (updateTaskDto.FechaEstimada < updateTaskDto.FechaInicio || updateTaskDto.FechaEstimada > proyecto.FechaFin)
+                {
+                    return BadRequest("La fecha estimada de la tarea debe ser posterior a la fecha de inicio y dentro del rango del proyecto.");
                 }
 
                 // Actualizar todos los campos permitidos
@@ -264,6 +351,7 @@ namespace APICore.Controllers
                 tarea.StatusId = updateTaskDto.StatusId;
                 tarea.Nombre = updateTaskDto.Nombre;
                 tarea.Descripcion = updateTaskDto.Descripcion;
+                tarea.FechaInicio = updateTaskDto.FechaInicio; // Nueva propiedad
                 tarea.FechaEstimada = updateTaskDto.FechaEstimada;
                 tarea.FechaReal = updateTaskDto.FechaReal;
 
@@ -278,6 +366,7 @@ namespace APICore.Controllers
                 return StatusCode(500, "Error interno del servidor al actualizar la tarea.");
             }
         }
+
 
 
         [HttpDelete("{id}")]
@@ -308,7 +397,7 @@ namespace APICore.Controllers
         {
             try
             {
-                // Filtrar todas las tareas del empleado para determinar el total de tareas
+                // Filtrar todas las tareas del empleado total general de tareas
                 var todasTareasEmpleado = _context.Tareas
                     .Where(t => t.UsuarioId == usuarioId);
 
@@ -343,6 +432,17 @@ namespace APICore.Controllers
                 var tareasATiempo = tareasCompletadas
                     .Count(t => t.FechaReal <= t.FechaEstimada);
 
+                // Calcular las tareas con retraso
+                var tareasConRetraso = tareasCompletadas
+                    .Where(t => t.FechaReal.HasValue && t.FechaReal > t.FechaEstimada) // fecha real tiene valor mayor 
+                    .Select(t => new
+                    {
+                        t.Nombre,
+                        DiasRetraso = ((t.FechaReal.Value - t.FechaEstimada).Days) // Dias de retrazo 
+                    })
+                    .ToList();
+
+
                 // Si no hay tareas filtradas, devolvemos valores vacíos
                 if (totalTareasFiltradas == 0)
                 {
@@ -352,21 +452,15 @@ namespace APICore.Controllers
                         TotalTareasFiltradas = 0,
                         TareasCompletadasATiempo = 0,
                         Productividad = "Sin datos",
-                        TiempoPromedioDeCompletitud = "N/A",
-                        DistribucionCategorias = new List<object>()
+                        DistribucionCategorias = new List<object>(),
+                        TareasConRetraso = new List<object>()
                     });
                 }
 
                 // Calcular la productividad como un porcentaje
                 var productividad = (double)tareasATiempo / totalTareasFiltradas * 100;
 
-                // Calcular el tiempo promedio de completitud (en días) para tareas completadas
-                double? tiempoPromedioDeCompletitud = null;
-                if (tareasCompletadas.Any())
-                {
-                    tiempoPromedioDeCompletitud = tareasCompletadas
-                        .Average(t => (t.FechaReal.Value - t.FechaEstimada).TotalDays);
-                }
+
 
                 // Distribución de tareas por categoría
                 var distribucionCategorias = await tareasFiltradas
@@ -386,10 +480,8 @@ namespace APICore.Controllers
                     TotalTareasFiltradas = totalTareasFiltradas, // Tareas según los filtros aplicados
                     TareasCompletadasATiempo = tareasATiempo,
                     Productividad = productividad,
-                    TiempoPromedioDeCompletitud = tiempoPromedioDeCompletitud.HasValue
-                        ? tiempoPromedioDeCompletitud.Value.ToString("F2")
-                        : "N/A",
-                    DistribucionCategorias = distribucionCategorias
+                    DistribucionCategorias = distribucionCategorias,
+                    TareasConRetraso = tareasConRetraso
                 });
             }
             catch (Exception ex)
@@ -401,8 +493,5 @@ namespace APICore.Controllers
 
 
     }
-
-
-
 
 }

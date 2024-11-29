@@ -108,6 +108,9 @@ namespace APICore.Migrations
                     b.Property<DateTime>("FechaEstimada")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("FechaInicio")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("FechaReal")
                         .HasColumnType("datetime2");
 
