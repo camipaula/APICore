@@ -8,27 +8,74 @@ Este repositorio contiene el backend de una aplicación para gestión de tareas 
 - **SQL Server** - Base de datos
 - **JWT** - Autenticación basada en JSON Web Tokens
 
-## Instalación y Configuración
+## Configuración
 
-1. **Clona el repositorio**
+1. **Configuración de la Base de Datos:**
+   - Abre el archivo `appsettings.json`.
+   - Actualiza la cadena de conexión en `ConnectionStrings`:
+     ```json
+     "ConnectionStrings": {
+       "DefaultConnection": "Server=TU_SERVIDOR;Database=APICoreDB;User Id=TU_USUARIO;Password=TU_CONTRASEÑA;"
+     }
+     ```
+
+2. **Migraciones:**
+   Ejecuta los siguientes comandos para aplicar migraciones y actualizar la base de datos:
    ```bash
-   git clone https://github.com/camipaula/APICore.git
-   cd APICore
-2. **Configura la base de datos**
+   dotnet ef migrations add InitialCreate
+   dotnet ef database update
+   ```
 
--Asegúrate de tener una instancia de SQL Server en ejecución.
--Configura la cadena de conexión en appsettings.json.
-3. **Realiza las migraciones y actualiza la base de datos**
-    ```bash
-    dotnet ef database update
-4. **Endpoints principales**
-/api/Usuario/Login: Autenticación de usuarios
-/api/Usuario/CreateUser: Creación de un nuevo usuario
-/api/Tarea: Gestión de tareas (CRUD)
-/api/Proyecto: Gestión de proyectos (CRUD)
-5. **Estructura del proyecto**
-Controllers: Define los controladores para cada entidad (Usuario, Tarea, Proyecto).
-Models: Contiene las clases de las entidades y sus relaciones.
-DTOs: Data Transfer Objects para manejar datos de entrada y salida.
-Data: Configuración del contexto de base de datos (ApplicationDbContext).
-Configurations: Configuración de autenticación y JWT.
+## Uso
+
+1. Inicia la aplicación:
+   ```bash
+   dotnet run
+   ```
+
+2. La API estará disponible en:
+   ```
+   http://localhost:5000
+   ```
+   La documentación Swagger estará disponible en:
+   ```
+   http://localhost:5000/swagger
+   ```
+
+## Estructura de Carpetas
+```
+APICore/
+│
+├── Controllers/         # Controladores de la API
+├── Models/              # Modelos de Entidad
+├── Data/                # Contexto de Base de Datos y Migraciones
+├── Services/            # Lógica de Negocio y Servicios
+├── appsettings.json     # Configuración de la Aplicación
+├── Program.cs           # Punto de Entrada
+└── Startup.cs           # Configuración y Middleware
+```
+
+## Contribuciones
+
+¡Las contribuciones son bienvenidas! Sigue estos pasos para contribuir:
+
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature-nombre`).
+3. Realiza tus cambios y haz un commit (`git commit -m 'Añadir nueva característica'`).
+4. Haz un push a la rama (`git push origin feature-nombre`).
+5. Abre un Pull Request.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
+
+---
+
+### Autor
+Creado por **Camila Paula**. Si tienes preguntas o sugerencias, no dudes en contactarme.
+
+---
+
+### Agradecimientos
+Gracias a la comunidad de código abierto por proporcionar herramientas y frameworks que facilitan el desarrollo.
+
