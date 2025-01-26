@@ -49,21 +49,11 @@ APICore/
 ├── Controllers/         # Controladores de la API
 ├── Models/              # Modelos de Entidad
 ├── Data/                # Contexto de Base de Datos y Migraciones
-├── Services/            # Lógica de Negocio y Servicios
+├── Services/            # Lógica de Negocio y Servicios (Singleton)
 ├── appsettings.json     # Configuración de la Aplicación
 ├── Program.cs           # Punto de Entrada
 └── Startup.cs           # Configuración y Middleware
 ```
-
-## Contribuciones
-
-¡Las contribuciones son bienvenidas! Sigue estos pasos para contribuir:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature-nombre`).
-3. Realiza tus cambios y haz un commit (`git commit -m 'Añadir nueva característica'`).
-4. Haz un push a la rama (`git push origin feature-nombre`).
-5. Abre un Pull Request.
 
 ## Licencia
 
