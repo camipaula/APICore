@@ -1,6 +1,7 @@
 ﻿using APICore.Data;
 using APICore.DTOs;
 using APICore.Models;
+using APICore.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -458,8 +459,11 @@ namespace APICore.Controllers
                 }
 
                 // Calcular la productividad como un porcentaje
-                var productividad = (double)tareasATiempo / totalTareasFiltradas * 100;
+               // var productividad = (double)tareasATiempo / totalTareasFiltradas * 100;
 
+
+               //Singleton
+                var productividad = MetricsService.Instance.CalcularProductividadEmpleado(tareasATiempo, totalTareasFiltradas);
 
 
                 // Distribución de tareas por categoría

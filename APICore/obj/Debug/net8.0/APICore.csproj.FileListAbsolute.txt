@@ -147,3 +147,7 @@ C:\Users\camil\source\repos\APICore\APICore\obj\Debug\net8.0\APICore.pdb
 C:\Users\camil\source\repos\APICore\APICore\obj\Debug\net8.0\APICore.genruntimeconfig.cache
 C:\Users\camil\source\repos\APICore\APICore\obj\Debug\net8.0\ref\APICore.dll
 C:\Users\camil\source\repos\APICore\APICore\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\camil\source\repos\APICore\APICore\bin\Debug\net8.0\APICore.staticwebassets.endpoints.json
+C:\Users\camil\source\repos\APICore\APICore\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\camil\source\repos\APICore\APICore\obj\Debug\net8.0\staticwebassets\msbuild.APICore.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\camil\source\repos\APICore\APICore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

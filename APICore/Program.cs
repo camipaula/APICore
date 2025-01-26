@@ -5,15 +5,19 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using APICore.Repositories;
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+// INYECCION DE DEPENDENCIAS
+builder.Services.AddScoped<IRepository<Proyecto>, ProyectoRepository>();
 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost", builder =>
     {
-        builder.WithOrigins("http://localhost:5174") // Puerto frontend
+        builder.WithOrigins("http://localhost:5173") // Puerto frontend
                .AllowAnyMethod()
                .AllowAnyHeader()
                .AllowCredentials();

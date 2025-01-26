@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "4Ds1l2XxkbTy/TXWyAbvarg7cKnine2NSHKF8fTrSHs=",
+  "Hash": "WROf5PABFvmrZD1JyC9OS/Ih3+EI7+OSfB5dFJW5WvU=",
   "Source": "APICore",
   "BasePath": "_content/APICore",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }
